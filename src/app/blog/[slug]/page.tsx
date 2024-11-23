@@ -119,9 +119,6 @@ return () => detachListener();
     console.log(blog);
 
   }, [params.slug, route])
-
-  useEffect(() => console.log(blog, blog?.mark), [blog, auth.currentUser])
-  useEffect(() => console.log(allComments), [allComments])
   
 
   return (
