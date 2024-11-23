@@ -5,11 +5,10 @@ import { UserType } from "@/types/userType";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import Link from "next/link"
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 export default function Navbar() {
     const [user, setUser] = useState<UserType | undefined>(undefined);
-    
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
