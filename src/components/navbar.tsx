@@ -89,9 +89,9 @@ export default function Navbar() {
 
                     ) : (
                         <span>
-                            <button className="btn btn-ghost">
+                            <button>
                                 <div className="indicator">
-                                    <button onClick={() => route.push('signup')}>Sign-up</button>
+                                    <Link className="btn btn-ghost" href={'/signup'}>Signup</Link>
                                 </div>
                             </button>
                         </span>
