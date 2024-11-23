@@ -9,8 +9,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 export default function Navbar() {
     const [user, setUser] = useState<UserType | undefined>(undefined);
-    const router = useRouter();
-
+    
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
