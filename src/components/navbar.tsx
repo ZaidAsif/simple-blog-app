@@ -5,9 +5,11 @@ import { UserType } from "@/types/userType";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import Link from "next/link"
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 export default function Navbar() {
     const [user, setUser] = useState<UserType | undefined>(undefined);
+    const route = useRouter();
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -89,7 +91,7 @@ export default function Navbar() {
                         <span>
                             <button className="btn btn-ghost">
                                 <div className="indicator">
-                                    <Link href={"@/signup"}>Sign-up</Link>
+                                    <button onClick={() => route.push('signup')}>Sign-up</button>
                                 </div>
                             </button>
                         </span>
