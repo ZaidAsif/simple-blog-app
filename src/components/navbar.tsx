@@ -91,7 +91,7 @@ export default function Navbar() {
                         <span>
                             <button className="btn btn-ghost">
                                 <div className="indicator">
-                                    <Link href={"/signup"}>Sign-up</Link>
+                                    <Link href={"@/signup"}>Sign-up</Link>
                                 </div>
                             </button>
                         </span>

@@ -15,9 +15,6 @@ export default function Signup() {
   const [password, setPassword] = useState('');
   const [profilePic, setProfilePic] = useState<File>()
 
-  // const [userEmail, setUserEmail] = useState<string>();
-  // const [uid, setUid] = useState<string>();
-
   const router = useRouter();
 
   const handleSignup = async () => {
@@ -27,8 +24,6 @@ export default function Signup() {
           const user = userCredential.user;
           console.log(user);
           uploadImage(email, user.uid);
-          // setUserEmail(email);
-          // setUid(user.uid);
           sendEmailVerification(user)
         })
 
@@ -37,7 +32,6 @@ export default function Signup() {
           const errorMessage = error.errorMessage;
           console.log(errorMessage, errorCode);
         })
-      // router.push('/verifyEmail');
     } catch (error) {
       console.error('Error signing up:', error);
     }
@@ -54,11 +48,9 @@ export default function Signup() {
       (snapshot) => {console.log(snapshot)},
       (error) => {console.log(error)},
       async () => {
-        // Retrieve the image URL once the upload is complete
         const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
         console.log('File available at', downloadURL);
 
-        // Only call saveUserInFirestore after the downloadURL is available
         await saveUserInFirestore(email, uid, downloadURL);
     }
     );
@@ -69,7 +61,6 @@ export default function Signup() {
       email,
       uid,
       profilePic: downloadURL,
-      isAdmin: false
     }
 
     const docRef = doc(db, "users", uid);

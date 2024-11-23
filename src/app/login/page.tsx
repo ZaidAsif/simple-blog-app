@@ -11,17 +11,6 @@ export default function Login() {
 
     const router = useRouter()
 
-    // useEffect(() => {
-    //     if(emailVerified === true) {
-    //         router.push('/home');
-    //     }
-    // }, [currentUser, router, emailVerified])
-
-    // const currentUser = auth.currentUser;
-
-
-
-
 
     const [email, setEmail] = useState<string | undefined>();
     const [password, setPassword] = useState<string | undefined>();
@@ -32,7 +21,6 @@ export default function Login() {
             const user = userCredential.user;
             console.log(user)
             router.push('/home')
-            // return user
         })
         .catch((error) => {
             const errorCode = error.code;
