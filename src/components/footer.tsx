@@ -1,7 +1,7 @@
 export default function ooter() {
     return (
         <footer className="footer bg-neutral text-neutral-content items-center p-4">
-  <aside className="grid-flow-col items-center">
+  <aside className="grid-flow-row items-center">
   {/* <div className="text-2xl font-serif font-bold"><span className="text-black font-bold">Blog</span><span className="text-red-500">Core</span></div> */}
   <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
   </aside>
