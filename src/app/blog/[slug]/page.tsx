@@ -189,8 +189,8 @@ return () => detachListener();
 
               {
                 allComments.map(({comment, createdAt}) => (
-                  <div key={comment + createdAt} className="chat chat-start w-2/5">
-                    <div className="chat-bubble">
+                  <div key={comment + createdAt} className="chat chat-start w-3/5">
+                    <div className="chat-bubble overflow-scroll h-24 w-3/5">
                     <p className="font-semibold text-sm">{formatCommentDate(createdAt)}</p>
                     <p>{comment}</p>
                   </div>
