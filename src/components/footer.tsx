@@ -2,15 +2,15 @@ export default function ooter() {
     return (
         <footer className="footer bg-neutral text-neutral-content items-center p-4">
   <aside className="grid-flow-col items-center">
-  <div className="text-3xl font-serif font-bold"><span className="text-black font-bold">Blog</span><span className="text-red-500">Core</span></div>
+  <div className="text-2xl font-serif font-bold"><span className="text-black font-bold">Blog</span><span className="text-red-500">Core</span></div>
   <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
   </aside>
   <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     <a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         className="fill-current">
         <path
@@ -20,8 +20,8 @@ export default function ooter() {
     <a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         className="fill-current">
         <path
@@ -31,8 +31,8 @@ export default function ooter() {
     <a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         className="fill-current">
         <path
